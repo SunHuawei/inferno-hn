@@ -1,0 +1,54 @@
+{
+  "name": "inferno-hn",
+  "version": "0.0.1",
+  "description": "inferno-powered Hacker News client",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "webpack-dev-server --quiet --config webpack.conf.js --host 0.0.0.0",
+    "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SunHuawei/inferno-hn.git"
+  },
+  "keywords": [
+    "inferno",
+    "Hacker News",
+    "HN",
+    "cerebral",
+    "jsx"
+  ],
+  "author": "Dominic Gannaway",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SunHuawei/inferno-hn/issues"
+  },
+  "homepage": "https://github.com/SunHuawei/inferno-hn#readme",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-eslint": "^7.2.1",
+    "babel-loader": "^6.4.1",
+    "babel-plugin-inferno": "^3.2.0",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-plugin-syntax-object-rest-spread": "^6.13.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^3.19.0",
+    "eslint-config-inferno-app": "^2.0.0",
+    "glob": "^7.1.1",
+    "inferno-devtools": "^3",
+    "url": "^0.11.0",
+    "webpack": "2.3.3",
+    "webpack-dev-server": "2.4.2"
+  },
+  "dependencies": {
+    "axios": "^0.16.1",
+    "history": "^4.6.1",
+    "inferno": "^3",
+    "inferno-component": "^3",
+    "inferno-create-element": "^3",
+    "inferno-router": "^3",
+    "whatwg-fetch": "^2.0.3"
+  }
+}
