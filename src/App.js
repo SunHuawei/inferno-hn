@@ -1,10 +1,13 @@
 import Header from './Header'
+import styles from './App.css'
 
 export default function App({ children }) {
     return (
-        <div>
+        <div className={styles.app}>
             <Header />
-            { children }
+            <div className={styles.content}>
+                { children }
+            </div>
         </div>
     );
 }

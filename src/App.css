@@ -1,0 +1,15 @@
+body {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 10pt;
+    color: #828282;
+}
+
+.app {
+    margin: auto;
+    width: 85%;
+    background: #f6f6ef;
+}
+
+.content {
+    padding: 10px 0 20px;
+}

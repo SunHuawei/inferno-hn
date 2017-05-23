@@ -1,9 +1,12 @@
 import { Link } from 'inferno-router';
+import Logo from './Logo.js'
+import styles from './Header.css'
 
 export default function Header({ navs }) {
     return (
-        <nav>
-            <ul>
+        <nav className={styles.nav}>
+            <div className={styles.logo}><Logo /></div>
+            <ul className={styles.ul}>
                 <li>
                     <Link to="/news">
                         Hacker News

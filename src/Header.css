@@ -1,0 +1,38 @@
+.logo {
+    width: 16px;
+    border: 1px solid #f6f6ef;
+    display: inline-block;
+    float: left;
+    margin: 2px 0px 0 2px;
+}
+
+.nav {
+    background: #e60022;
+    line-height: 24px;
+}
+
+.ul {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0;
+    padding: 0 10px;
+}
+
+.ul li:after {
+    content: "|";
+    display: inline-block;
+    color: #333;
+    position: relative;
+    left: 13px;
+}
+
+.ul li a {
+    color: #333;
+    text-decoration: none;
+}

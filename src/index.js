@@ -21,7 +21,9 @@ const routes = (
 		<Route component={ App }>
             <Route path="/" component={ TopNews } />
             <Route path="/news" component={ TopNews } />
-			<Route path="/jobs" component={ Jobs } />
+            <Route path="/news/:page" component={ TopNews } />
+            <Route path="/jobs" component={ Jobs } />
+			<Route path="/jobs/:page" component={ Jobs } />
 		</Route>
 	</Router>
 );

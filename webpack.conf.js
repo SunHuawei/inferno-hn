@@ -1,5 +1,31 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const autoprefixer = require('autoprefixer');
+
+const ExtractCSSPlugin = new ExtractTextPlugin({
+  filename: 'bundle.[name].[chunkhash].css',
+  allChunks: true // This is not ideal. However, Extract-Text doesn't support extractng the per bundle css.
+});
+
+const CSS_LOADER_OPTIONS = {
+  modules: true,
+  localIdentName: '[hash:base64:8]',
+  minimize: true,
+  camelCase: false,
+  importLoaders: 1
+};
+
+const POSTCSS_LOADER_OPTIONS = {
+    plugins: function() {
+      return [
+        autoprefixer({
+          browsers: "last 3 versions"
+        })
+      ];
+    }
+};
+
 
 module.exports = {
 	entry: './src/index.js',
@@ -13,7 +39,17 @@ module.exports = {
 		loaders: [{
 			test: /\.js$/,
 			loader: 'babel-loader'
-		}]
+		}, {
+            test: /\.css$/,
+            exclude: /node_modules/,
+            use: ExtractCSSPlugin.extract({
+              fallback: 'style-loader',
+              use: [
+                { loader: 'css-loader', options: CSS_LOADER_OPTIONS },
+                { loader: 'postcss-loader', options: POSTCSS_LOADER_OPTIONS }
+              ]
+            })
+        }]
 	},
 	devServer: {
 		contentBase: './',
@@ -30,6 +66,7 @@ module.exports = {
 		}
 	},
 	plugins: [
+        ExtractCSSPlugin,
 		new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({
             filename: 'public/index.html',

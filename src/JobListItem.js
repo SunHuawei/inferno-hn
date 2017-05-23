@@ -8,7 +8,7 @@ export default function({index, item}) {
   return (
     <article>
       <div>
-        <h2><a href={url}>{title}</a></h2>
+        <a href={url}>{title}</a>
         <p>
             {time_ago}
         </p>

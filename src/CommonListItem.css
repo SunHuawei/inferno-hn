@@ -1,0 +1,36 @@
+.index {
+    width: 40px;
+    text-align: right;
+    margin-right: 4px;
+    display: inline-block;
+}
+
+.title {
+    line-height: 24px;
+}
+
+.item {
+
+}
+
+.link {
+    color: #333;
+    text-decoration: none;
+}
+
+.subtext {
+    font-size: 7pt;
+    line-height: 22px;
+    display: inline-block;
+    margin-left: 44px;
+    color: #828282;
+}
+
+.subtext a {
+    color: #828282;
+    text-decoration: none;
+}
+
+.subtext a:hover {
+    text-decoration: underline;
+}
