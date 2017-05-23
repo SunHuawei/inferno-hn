@@ -1,10 +1,11 @@
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	entry: './src/index.js',
 	output: {
 		path: '/',
-		filename: 'bundle.js',
+		filename: 'bundle.[hash].js',
 		publicPath: 'http://localhost:8080/'
 	},
 	devtool: 'source-map',
@@ -29,6 +30,10 @@ module.exports = {
 		}
 	},
 	plugins: [
-		new webpack.HotModuleReplacementPlugin()
+		new webpack.HotModuleReplacementPlugin(),
+        new HtmlWebpackPlugin({
+            filename: 'public/index.html',
+            template: 'src/index.html'
+        })
 	]
 };
